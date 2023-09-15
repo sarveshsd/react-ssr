@@ -15,13 +15,7 @@ jobs:
       
       - name: Clear Node.js cache
         run: npm cache clean -f
-
-      - name: Clear GitHub Actions cache
-        run: |
-        echo "Clearing the GitHub Actions cache..."
-        npm cache clean --force
-        if: always()
-      
+    
       - name: Install Node.js
         uses: actions/setup-node@v2
         with:
